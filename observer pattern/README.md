@@ -1,0 +1,1 @@
+[浅谈发布订阅模式与观察者模式](https://www.jb51.net/article/159325.htm)
