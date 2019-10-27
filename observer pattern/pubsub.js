@@ -1,6 +1,6 @@
 //定义一家猎人工会
 //主要功能包括任务发布大厅(topics)，以及订阅任务(subscribe)，发布任务(publish)
-let HunterUnion = {
+var HunterUnion = {
   type: 'hunt',
   topics: Object.create(null),
   subscribe: function(topic, fn) {
@@ -12,7 +12,7 @@ let HunterUnion = {
   publish: function(topic, money) {
     if (!this.topics[topic])
       return;
-    for (let fn of this.topics[topic]) {
+    for (var fn of this.topics[topic]) {
       fn(money);
     }
   }
@@ -50,7 +50,7 @@ hunterMing.subscribe('tiger', function(money) {
 
 hunterJin.subscribe('tiger', function(money) {
   console.log('小金表示：接取任务');
-})
+});
 
 hunterZhange.subscribe('tiger', function(money) {
   console.log('小张表示：接取任务');
